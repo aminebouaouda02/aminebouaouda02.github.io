@@ -1,0 +1,31 @@
+/* General */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1200x800') center/cover no-repeat;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Projects Cards */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Skills */
+#skills i {
+  color: #007bff;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+}

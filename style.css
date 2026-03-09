@@ -29,3 +29,29 @@ body {
 footer {
   margin-top: 50px;
 }
+
+/* Contact Form */
+#contactForm .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#submitBtn {
+  min-width: 120px;
+  transition: opacity 0.2s ease;
+}
+
+#submitBtn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+#formSuccess,
+#formError {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amine - Data Science Portfolio</title>
+<title>Amine Bouaouda - Data Science Portfolio</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,6 +30,11 @@
 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
 <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item ms-2">
+  <button id="themeToggle" class="btn btn-outline-light btn-sm" title="Toggle dark/light mode">
+    <i id="themeIcon" class="fas fa-moon"></i>
+  </button>
+</li>
 </ul>
 </div>
 </div>
@@ -37,9 +42,27 @@
 
 <section class="hero bg-dark text-white text-center d-flex align-items-center" style="height:100vh;">
 <div class="container">
-<h1 data-aos="fade-up">Hi, I'm Amine bouaouda!</h1>
-<p class="lead" data-aos="fade-up" data-aos-delay="200">Data Science Student | ML Enthusiast</p>
-<a href="#projects" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="400">See Projects</a>
+<h1 data-aos="fade-up">Hi, I'm Amine Bouaouda!</h1>
+<p class="lead" data-aos="fade-up" data-aos-delay="200">
+  <span id="typingText" class="typing-text"></span><span class="cursor">|</span>
+</p>
+<div data-aos="fade-up" data-aos-delay="400" class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+  <a href="#projects" class="btn btn-primary btn-lg">See Projects</a>
+  <a href="docs/resume.pdf" class="btn btn-outline-light btn-lg" download>
+    <i class="fas fa-download me-1"></i> Download CV
+  </a>
+</div>
+<div data-aos="fade-up" data-aos-delay="600" class="mt-4 hero-socials">
+  <a href="https://github.com/aminebouaouda02" target="_blank" rel="noopener" class="text-white me-3" title="GitHub">
+    <i class="fab fa-github fa-2x"></i>
+  </a>
+  <a href="https://linkedin.com/in/aminebouaouda" target="_blank" rel="noopener" class="text-white me-3" title="LinkedIn">
+    <i class="fab fa-linkedin fa-2x"></i>
+  </a>
+  <a href="mailto:bouaouda.amine@ensam-casa.ma" class="text-white" title="Email">
+    <i class="fas fa-envelope fa-2x"></i>
+  </a>
+</div>
 </div>
 </section>
 
@@ -100,7 +123,7 @@ I love turning data into actionable insights.
 <div class="container">
 <h2 class="text-center mb-4" data-aos="fade-right">Skills</h2>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center mb-5">
 
 <div class="col-md-2 text-center" data-aos="flip-left">
 <i class="fab fa-python fa-3x mb-2"></i>
@@ -122,7 +145,44 @@ I love turning data into actionable insights.
 <p>JavaScript</p>
 </div>
 
+<div class="col-md-2 text-center" data-aos="flip-left" data-aos-delay="400">
+<i class="fas fa-brain fa-3x mb-2"></i>
+<p>Deep Learning</p>
 </div>
+
+</div>
+
+<div class="row justify-content-center" data-aos="fade-up">
+<div class="col-md-8">
+
+<div class="mb-3">
+<div class="d-flex justify-content-between mb-1"><span>Python</span><span>90%</span></div>
+<div class="progress"><div class="progress-bar skill-bar" data-pct="90" role="progressbar" style="width:0"></div></div>
+</div>
+
+<div class="mb-3">
+<div class="d-flex justify-content-between mb-1"><span>Machine Learning</span><span>80%</span></div>
+<div class="progress"><div class="progress-bar skill-bar bg-success" data-pct="80" role="progressbar" style="width:0"></div></div>
+</div>
+
+<div class="mb-3">
+<div class="d-flex justify-content-between mb-1"><span>SQL</span><span>75%</span></div>
+<div class="progress"><div class="progress-bar skill-bar bg-info" data-pct="75" role="progressbar" style="width:0"></div></div>
+</div>
+
+<div class="mb-3">
+<div class="d-flex justify-content-between mb-1"><span>Deep Learning</span><span>65%</span></div>
+<div class="progress"><div class="progress-bar skill-bar bg-warning" data-pct="65" role="progressbar" style="width:0"></div></div>
+</div>
+
+<div class="mb-3">
+<div class="d-flex justify-content-between mb-1"><span>JavaScript</span><span>60%</span></div>
+<div class="progress"><div class="progress-bar skill-bar bg-danger" data-pct="60" role="progressbar" style="width:0"></div></div>
+</div>
+
+</div>
+</div>
+
 </div>
 </section>
 
@@ -174,16 +234,25 @@ Something went wrong. Please try again later.
 </div>
 </section>
 
-<footer class="bg-dark text-white text-center py-3">
-<p>&copy; 2026 Amine. All Rights Reserved.</p>
+<footer class="bg-dark text-white text-center py-4">
+<div class="mb-2">
+  <a href="https://github.com/aminebouaouda02" target="_blank" rel="noopener" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+  <a href="https://linkedin.com/in/aminebouaouda" target="_blank" rel="noopener" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+  <a href="mailto:bouaouda.amine@ensam-casa.ma" class="text-white"><i class="fas fa-envelope fa-lg"></i></a>
+</div>
+<p class="mb-0">&copy; 2026 Amine Bouaouda. All Rights Reserved.</p>
 </footer>
+
+<button id="backToTop" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 
-AOS.init();
+AOS.init({ once: true });
 
 const form = document.getElementById("contactForm");
 const success = document.getElementById("formSuccess");
@@ -236,6 +305,8 @@ text.textContent="Send";
 });
 
 </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>

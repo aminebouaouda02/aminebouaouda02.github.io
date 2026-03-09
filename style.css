@@ -2,16 +2,95 @@
 body {
   scroll-behavior: smooth;
   font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ── Dark mode ────────────────────────────────────────────────────────────── */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .bg-light {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .card {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-mode .card-text {
+  color: #bbb;
+}
+
+body.dark-mode .form-control {
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #888;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e !important;
 }
 
 /* Hero Section */
 .hero {
-  background: url('https://via.placeholder.com/1200x800') center/cover no-repeat;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Typing animation */
+.typing-text {
+  color: #4dabf7;
+  font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  color: #4dabf7;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Hero social icons */
+.hero-socials a {
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.hero-socials a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
 }
 
 /* Navbar */
 .navbar-brand {
   font-weight: bold;
+}
+
+.navbar .nav-link.active {
+  color: #fff !important;
+  font-weight: 600;
+  border-bottom: 2px solid #0d6efd;
 }
 
 /* Projects Cards */
@@ -20,12 +99,77 @@ body {
   height: 200px;
 }
 
+.card {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
 /* Skills */
 #skills i {
   color: #007bff;
 }
 
+#skills .progress {
+  height: 12px;
+  border-radius: 6px;
+  background-color: #e9ecef;
+}
+
+body.dark-mode #skills .progress {
+  background-color: #444;
+}
+
+.skill-bar {
+  width: 0;
+  border-radius: 6px;
+  transition: width 1.2s ease;
+}
+
+/* Back-to-top button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+  background: #0b5ed7;
+}
+
 /* Footer */
 footer {
   margin-top: 50px;
+}
+
+footer a {
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 0.7;
 }
